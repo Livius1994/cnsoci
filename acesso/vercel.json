@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/verificacao", "destination": "/verificacao.html" },
+    { "source": "/saiba-mais", "destination": "/saiba-mais.html" },
+    { "source": "/verify-availability", "destination": "/verify-availability.html" },
+    { "source": "/chat", "destination": "/chat.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
